@@ -20,3 +20,16 @@ after_success:
   - docker push theautonater801/multi-nginx
   - docker push theautonater801/multi-server
   - docker push theautonater801/multi-worker
+
+deploy:
+  provider: elasticbeanstalk
+  region: us-east-2
+  app: "multi-docker"
+  end: "Multi-docker-env"
+  bucket_name: "elasticbeanstalk-us-east-2-590183884677"
+  bucket_path: "docker-multi"
+  on:
+    branch: master
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
