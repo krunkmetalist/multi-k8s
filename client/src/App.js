@@ -17,7 +17,7 @@ function App() {
             target="_blank"
             rel="noopener noreferrer"
           >
-            Fib calculator / 502 generator
+            Fib calculator / Nate's Cloud hosted k8s instance
           </a>
           <Link to="/">Home</Link>
           <Link to="/otherpage">Other Page</Link>
